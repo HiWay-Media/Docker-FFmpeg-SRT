@@ -2,7 +2,7 @@
 FROM ubuntu:22.04
 MAINTAINER Allan-Nava
 #
-ENV DEBIAN_FRONTEND noninterac1tive
+#ENV DEBIAN_FRONTEND noninterac1tive
 ENV TZ=Etc/UTC
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
