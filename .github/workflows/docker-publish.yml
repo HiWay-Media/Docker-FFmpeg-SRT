@@ -8,7 +8,7 @@ on:
       - '*'
 #
 jobs:
-  nvenc-docker:
+  docker-ffmpeg-srt:
     runs-on: ubuntu-latest
     permissions:
       contents: read
