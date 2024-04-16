@@ -36,16 +36,16 @@ apt-get update -qq &&  apt-get -y install \
   cmake
   
 #
-cd ~/ffmpeg_sources
+cd /app/ffmpeg_sources
 git clone --depth 1 https://github.com/Haivision/srt.git
-mkdir ~/srt/build
-cd ~/srt/build
+mkdir /app/srt/build
+cd /app/srt/build
 cmake -DCMAKE_INSTALL_PREFIX="$HOME/ffmpeg_build" -DENABLE_C_DEPS=ON -DENABLE_SHARED=ON ..
 make
 make install
 
 #
-cd ~
+cd /app
 git clone -b n5.1.2 https://github.com/FFmpeg/FFmpeg
 cd FFmpeg
 
@@ -71,8 +71,8 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig"
 PATH="$HOME/bin:$PATH" make && make install
 
 #
-echo "export CGO_LDFLAGS=\"-L$HOME/ffmpeg_build/lib/\"" >> ~/.profile 
-echo "export CGO_CFLAGS=\"-L$HOME/ffmpeg_build/include/\"" >> ~/.profile 
-echo "export PKG_CONFIG_PATH=\"-L$HOME/ffmpeg_build/lib/pkgconfig\"" >> ~/.profile 
-source ~/.profile 
+echo "export CGO_LDFLAGS=\"-L$HOME/ffmpeg_build/lib/\"" >> /app/.profile 
+echo "export CGO_CFLAGS=\"-L$HOME/ffmpeg_build/include/\"" >> /app/.profile 
+echo "export PKG_CONFIG_PATH=\"-L$HOME/ffmpeg_build/lib/pkgconfig\"" >> /app/.profile 
+source /app/.profile 
 #
