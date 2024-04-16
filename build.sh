@@ -36,20 +36,20 @@ apt-get update -qq &&  apt-get -y install \
   cmake
   
 #
-mkdir -p /app/ffmpeg_sources
-pwd
+#mkdir -p ~/ffmpeg_sources
+#pwd
 #
-cd /app/ffmpeg_sources
+cd ~/ffmpeg_sources
 git clone --depth 1 https://github.com/Haivision/srt.git
 
-mkdir /app/ffmpeg_sources/srt/build
-cd /app/ffmpeg_sources/srt/build
+mkdir ~/ffmpeg_sources/srt/build
+cd ~/ffmpeg_sources/srt/build
 cmake -DCMAKE_INSTALL_PREFIX="$HOME/ffmpeg_build" -DENABLE_C_DEPS=ON -DENABLE_SHARED=ON ..
 make
 make install
 
 #
-cd /app
+cd ~
 git clone -b n5.1.2 https://github.com/FFmpeg/FFmpeg
 cd FFmpeg
 
