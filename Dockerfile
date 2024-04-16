@@ -1,5 +1,6 @@
 # syntax=docker/dockerfile:1
 FROM ubuntu:22.04
+ENV DEBIAN_FRONTEND noninterac1tive
 #
 MAINTAINER Allan-Nava
 #
