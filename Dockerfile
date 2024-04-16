@@ -5,6 +5,6 @@ MAINTAINER Allan-Nava
 #
 WORKDIR /app
 COPY . .
-RUN build.sh
+RUN bash -x build.sh
 #
 CMD ["/bin/bash"]
