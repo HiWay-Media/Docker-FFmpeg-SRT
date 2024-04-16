@@ -2,9 +2,8 @@ name: Docker FFmpeg 5.1.2 and SRT
 #
 on:
   push:
-    #branches: 
-    #  - master
-    #  - main
+    branches: 
+      - main
     tags:
       - '*'
 #
