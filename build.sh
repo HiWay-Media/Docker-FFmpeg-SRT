@@ -34,8 +34,9 @@ apt-get update -qq &&  apt-get -y install \
   tclsh \
   pkg-config \
   cmake
-  
-
+#  
+mkdir -p ~/ffmpeg_build
+#
 git clone --depth 1 https://github.com/Haivision/srt.git
 
 mkdir -p ~/srt/build
