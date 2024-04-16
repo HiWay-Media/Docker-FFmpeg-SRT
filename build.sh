@@ -1,4 +1,7 @@
-sudo apt-get update -qq && sudo apt-get -y install \
+#!/bin/sh
+set -e 
+#
+apt-get update -qq &&  apt-get -y install \
   autoconf \
   automake \
   build-essential \
@@ -32,11 +35,7 @@ sudo apt-get update -qq && sudo apt-get -y install \
   pkg-config \
   cmake
   
-  
-
-
-
-
+#
 cd ~/ffmpeg_sources
 git clone --depth 1 https://github.com/Haivision/srt.git
 mkdir ~/srt/build
@@ -45,11 +44,7 @@ cmake -DCMAKE_INSTALL_PREFIX="$HOME/ffmpeg_build" -DENABLE_C_DEPS=ON -DENABLE_SH
 make
 make install
 
-
-
-
-
-
+#
 cd ~
 git clone -b n5.1.2 https://github.com/FFmpeg/FFmpeg
 cd FFmpeg
@@ -75,11 +70,9 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig"
   --enable-version3
 PATH="$HOME/bin:$PATH" make && make install
 
-
-
-
-
+#
 echo "export CGO_LDFLAGS=\"-L$HOME/ffmpeg_build/lib/\"" >> ~/.profile 
 echo "export CGO_CFLAGS=\"-L$HOME/ffmpeg_build/include/\"" >> ~/.profile 
 echo "export PKG_CONFIG_PATH=\"-L$HOME/ffmpeg_build/lib/pkgconfig\"" >> ~/.profile 
 source ~/.profile 
+#
