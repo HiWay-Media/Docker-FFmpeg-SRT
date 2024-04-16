@@ -36,6 +36,9 @@ apt-get update -qq &&  apt-get -y install \
   cmake
   
 #
+mkdir -p /app/ffmpeg_sources
+pwd
+#
 cd /app/ffmpeg_sources
 git clone --depth 1 https://github.com/Haivision/srt.git
 mkdir /app/srt/build
@@ -71,8 +74,8 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig"
 PATH="$HOME/bin:$PATH" make && make install
 
 #
-echo "export CGO_LDFLAGS=\"-L$HOME/ffmpeg_build/lib/\"" >> /app/.profile 
-echo "export CGO_CFLAGS=\"-L$HOME/ffmpeg_build/include/\"" >> /app/.profile 
-echo "export PKG_CONFIG_PATH=\"-L$HOME/ffmpeg_build/lib/pkgconfig\"" >> /app/.profile 
-source /app/.profile 
+echo "export CGO_LDFLAGS=\"-L$HOME/ffmpeg_build/lib/\"" >> ~/.profile 
+echo "export CGO_CFLAGS=\"-L$HOME/ffmpeg_build/include/\"" >> ~/.profile 
+echo "export PKG_CONFIG_PATH=\"-L$HOME/ffmpeg_build/lib/pkgconfig\"" >> ~/.profile 
+source ~/.profile 
 #
