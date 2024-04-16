@@ -41,8 +41,9 @@ pwd
 #
 cd /app/ffmpeg_sources
 git clone --depth 1 https://github.com/Haivision/srt.git
-mkdir /app/srt/build
-cd /app/srt/build
+
+mkdir /app/ffmpeg_sources/srt/build
+cd /app/ffmpeg_sources/srt/build
 cmake -DCMAKE_INSTALL_PREFIX="$HOME/ffmpeg_build" -DENABLE_C_DEPS=ON -DENABLE_SHARED=ON ..
 make
 make install
