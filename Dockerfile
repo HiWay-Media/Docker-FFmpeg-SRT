@@ -10,6 +10,11 @@ ENV LC_ALL=C.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 #
+RUN groupadd -r ies --gid=1280 && useradd -r -g ies --uid=1280 --create-home --shell /bin/bash ies
+# switch user from 'root' to ies and also to the home directory that it owns 
+USER ies
+WORKDIR /home/ies
+#
 ## preesed tzdata, update package index, upgrade packages and install needed software
 RUN truncate -s0 /tmp/preseed.cfg; \
     echo "tzdata tzdata/Areas select Europe" >> /tmp/preseed.cfg; \
