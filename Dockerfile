@@ -15,15 +15,6 @@ RUN groupadd -r ies --gid=1280 && useradd -r -g ies --uid=1280 --create-home --s
 USER ies
 WORKDIR /home/ies
 #
-## preesed tzdata, update package index, upgrade packages and install needed software
-RUN truncate -s0 /tmp/preseed.cfg; \
-    echo "tzdata tzdata/Areas select Europe" >> /tmp/preseed.cfg; \
-    echo "tzdata tzdata/Zones/Europe select Berlin" >> /tmp/preseed.cfg; \
-    debconf-set-selections /tmp/preseed.cfg && \
-    rm -f /etc/timezone /etc/localtime && \
-    apt-get update && \
-    apt-get install -y tzdata
-#
 #WORKDIR /app
 COPY . .
 RUN bash -x build.sh
