@@ -38,10 +38,11 @@ apt-get update -qq &&  apt-get -y install \
 mkdir -p ~/ffmpeg_build
 #
 git clone --depth 1 https://github.com/Haivision/srt.git
-
-mkdir -p ~/srt/build
+#mkdir -p ~/srt/build
 cd ~/srt/
-./configure
+ls -l 
+cat CMakeLists.txt
+#
 cmake -DCMAKE_INSTALL_PREFIX="$HOME/ffmpeg_build" -DENABLE_C_DEPS=ON -DENABLE_SHARED=ON ..
 make
 make install
