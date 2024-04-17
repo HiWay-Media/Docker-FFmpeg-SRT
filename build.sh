@@ -40,14 +40,19 @@ mkdir -p ~/ffmpeg_build
 cd ~
 pwd
 git clone --depth 1 https://github.com/Haivision/srt.git
-#mkdir -p ~/srt/build
+#
+mkdir -p ~/srt/build
 cd ~/srt/
 ls -l 
 cat CMakeLists.txt
 #
+pwd
+#
 cmake -DCMAKE_INSTALL_PREFIX="$HOME/ffmpeg_build" -DENABLE_C_DEPS=ON -DENABLE_SHARED=ON ..
 make
 make install
+#
+pwd
 #
 cd ~
 git clone -b n5.1.2 https://github.com/FFmpeg/FFmpeg
