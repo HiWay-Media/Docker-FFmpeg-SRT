@@ -33,8 +33,7 @@ apt-get update -qq &&  apt-get -y install \
   libnuma-dev \
   tclsh \
   pkg-config \
-  cmake \
-  tzdata
+  cmake 
 #  
 mkdir -p ~/ffmpeg_build
 #
