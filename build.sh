@@ -41,6 +41,7 @@ git clone --depth 1 https://github.com/Haivision/srt.git
 
 mkdir -p ~/srt/build
 cd ~/srt/
+./configure
 cmake -DCMAKE_INSTALL_PREFIX="$HOME/ffmpeg_build" -DENABLE_C_DEPS=ON -DENABLE_SHARED=ON ..
 make
 make install
