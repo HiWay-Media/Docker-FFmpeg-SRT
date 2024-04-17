@@ -59,7 +59,8 @@ git clone -b n5.1.2 https://github.com/FFmpeg/FFmpeg
 cd FFmpeg
 #
 #
-PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig"
+export PATH="$HOME/bin:$PATH" \
+export PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig"
 ./configure \
   --prefix="$HOME/ffmpeg_build" \
   --pkg-config-flags="--static" \
@@ -77,7 +78,8 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig"
   --enable-libsrt \
   --enable-nonfree \
   --enable-version3
-PATH="$HOME/bin:$PATH" make && make install
+export PATH="$HOME/bin:$PATH" 
+make && make install
 #
 #
 echo "export CGO_LDFLAGS=\"-L$HOME/ffmpeg_build/lib/\"" >> ~/.profile 
