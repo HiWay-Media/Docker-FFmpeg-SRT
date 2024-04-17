@@ -9,6 +9,7 @@ ENV LC_ALL=C.UTF-8
 ## for apt to be noninteractive
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
+ENV HOME /home
 #
 WORKDIR /home
 #
