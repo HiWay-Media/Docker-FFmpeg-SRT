@@ -17,6 +17,8 @@ WORKDIR /home
 COPY . .
 RUN bash -x build.sh
 #
-RUN rm -R /home/FFmpeg 
+RUN rm -R /home/FFmpeg
+RUN mv /home/bin/ffmpeg /usr/bin
+RUN mv /home/bin/ffprobe /usr/bin
 #
 CMD ["/bin/bash"]
