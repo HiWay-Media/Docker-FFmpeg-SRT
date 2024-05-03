@@ -77,7 +77,29 @@ export PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig"
   --enable-libx265 \
   --enable-libsrt \
   --enable-nonfree \
-  --enable-version3
+  --enable-version3 \
+  --enable-pthreads \
+  --extra-libs=-lpthread \
+  --pkg-config-flags=--static \
+  --enable-postproc \
+  --enable-bzlib \
+  --enable-zlib \
+  --enable-libmp3lame \
+  --enable-libfdk-aac \
+  --enable-libxml2 \
+  --enable-demuxer=dash \
+  --enable-openssl \
+  --enable-protocol=tls \
+  --enable-protocol=rtmps \
+  --enable-filter=drawtext \
+  --enable-libfontconfig 
+  #--enable-libfreetype \
+  #--enable-nonfree \
+  #--enable-gpl \
+  #--enable-libx264 \
+  #--enable-libass \
+  #--enable-libsrt \
+  #--enable-libx265
 export PATH="$HOME/bin:$PATH" 
 make && make install && rm -rf /tmp/FFmpeg
 #
