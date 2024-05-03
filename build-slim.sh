@@ -92,15 +92,7 @@ export PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig"
   --enable-protocol=rtmps \
   --enable-filter=drawtext \
   --enable-libfontconfig 
-
-  #--enable-libfdk-aac \
-  #--enable-libfreetype \
-  #--enable-nonfree \
-  #--enable-gpl \
-  #--enable-libx264 \
-  #--enable-libass \
-  #--enable-libsrt \
-  #--enable-libx265
+#
 export PATH="$HOME/bin:$PATH" 
 make && make install && rm -rf /tmp/FFmpeg && rm -rf /home/FFmpeg
 #
