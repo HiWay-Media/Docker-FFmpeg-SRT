@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e 
 #
-apk update -qq &&  apk add -y \
+apk update  &&  apk add \
   autoconf \
   automake \
   build-essential \
