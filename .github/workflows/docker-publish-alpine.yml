@@ -1,4 +1,4 @@
-name: Docker busybox FFmpeg 5.1.2 and SRT 
+name: Docker alpine FFmpeg 5.1.2 and SRT 
 #
 on:
   push:
