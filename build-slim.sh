@@ -33,6 +33,7 @@ apt-get update -qq &&  apt-get -y install \
   libnuma-dev \
   tclsh \
   pkg-config \
+  libxml2-dev \
   cmake 
 #  
 mkdir -p ~/ffmpeg_build
