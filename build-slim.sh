@@ -90,6 +90,7 @@ export PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig"
   --enable-protocol=tls \
   --enable-protocol=rtmps \
   --enable-filter=drawtext \
+  --enable-libxml2 \
   --enable-libfontconfig 
 #
 export PATH="$HOME/bin:$PATH" 
