@@ -101,7 +101,7 @@ export PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig"
   #--enable-libsrt \
   #--enable-libx265
 export PATH="$HOME/bin:$PATH" 
-make && make install && rm -rf /tmp/FFmpeg
+make && make install && rm -rf /tmp/FFmpeg && rm -rf /home/FFmpeg
 #
 #
 echo "export CGO_LDFLAGS=\"-L$HOME/ffmpeg_build/lib/\"" >> ~/.profile 

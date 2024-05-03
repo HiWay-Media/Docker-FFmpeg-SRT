@@ -15,7 +15,7 @@ WORKDIR /home
 #
 #WORKDIR /app
 COPY . .
-RUN bash -x build.sh
+RUN bash -x build-slim.sh
 #
 #RUN rm -rf /home/FFmpeg
 RUN mv /home/bin/ffmpeg /usr/bin
