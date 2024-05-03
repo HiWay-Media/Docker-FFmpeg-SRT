@@ -85,7 +85,6 @@ export PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig"
   --enable-bzlib \
   --enable-zlib \
   --enable-libmp3lame \
-  --enable-libfdk-aac \
   --enable-libxml2 \
   --enable-demuxer=dash \
   --enable-openssl \
@@ -93,6 +92,8 @@ export PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig"
   --enable-protocol=rtmps \
   --enable-filter=drawtext \
   --enable-libfontconfig 
+
+  #--enable-libfdk-aac \
   #--enable-libfreetype \
   #--enable-nonfree \
   #--enable-gpl \
