@@ -85,7 +85,6 @@ export PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig"
   --enable-bzlib \
   --enable-zlib \
   --enable-libmp3lame \
-  --enable-libxml2 \
   --enable-demuxer=dash \
   --enable-openssl \
   --enable-protocol=tls \
