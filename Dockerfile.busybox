@@ -16,7 +16,7 @@ WORKDIR /home
 #
 #WORKDIR /app
 COPY . .
-RUN ash build.sh
+RUN ash build-busybox.sh
 #
 RUN rm -R /home/FFmpeg
 RUN mv /home/bin/ffmpeg /usr/bin
