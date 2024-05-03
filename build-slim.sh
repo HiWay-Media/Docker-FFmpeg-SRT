@@ -58,7 +58,6 @@ cd /tmp
 git clone -b n5.1.2 https://github.com/FFmpeg/FFmpeg
 cd FFmpeg
 #
-#
 export PATH="$HOME/bin:$PATH" \
 export PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig"
 ./configure \
